@@ -1,4 +1,3 @@
-import os.system
 from gpiozero import Button
 from time import sleep
 
