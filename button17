@@ -1,0 +1,8 @@
+from picamera import PiCamera
+import subprocess
+
+
+
+
+cmd = "raspstill -vf -o /home/pi/Documents/images/image.jpeg"
+subprocess.call(cmd, shell=True)
