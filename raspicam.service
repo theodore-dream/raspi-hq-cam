@@ -1,0 +1,23 @@
+# This is a systemd unit file that needs to be placed in following location:
+# /etc/systemd/system/raspicam.service
+# This unit file needs to be loaded and enabled before it will autostart on boot
+# sudo systemctl daemon-reload
+# sudo systemctl enable raspicam
+
+[Unit]
+Description=raspberry pi high quality camera systemd daemon unit file to autostart main python script which will call the other sub-scripts for each button
+Wants=graphical.target
+After=graphical.target
+
+[Service]
+# command to execute when service is started
+ExecStart=/usr/bin/python3 /home/pi/Documents/raspi-hq-cam/main.py
+WorkingDirectory=/home/pi/Documents/raspi-hq-cam
+StandardOutput=inherit
+StandardError=inherit
+Restart=on-failure
+User=pi
+
+[Install]
+WantedBy=graphical.target
+
