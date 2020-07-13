@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from picamera import PiCamera
 from time import sleep
@@ -12,7 +12,7 @@ def image():
    camera = PiCamera()
    camera.resolution = (1920, 1080)
    camera.start_preview()
-   sleep(2)
+   time.sleep(2)
    camera.capture(imagefolder + 'image' + timestr + format)
    return;
 
