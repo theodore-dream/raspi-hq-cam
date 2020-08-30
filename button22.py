@@ -16,8 +16,8 @@ def video():
    camera.framerate = 22
    camera.start_preview()
    time.sleep(2)
-   camera.start_recording((imagefolder + 'video' + timestr + format), format='h264', quality=5)
-   camera.wait_recording(30)
+   camera.start_recording((imagefolder + 'video' + timestr + format), format='h264', quality=22)
+   camera.wait_recording(300)
    camera.stop_recording()
    return;
 

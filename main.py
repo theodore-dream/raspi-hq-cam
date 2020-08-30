@@ -20,6 +20,7 @@ while True:
         subprocess.run("/home/pi/Documents/raspi-hq-cam/button23.py", shell=True)
     if button27.is_pressed:
         print("button27 pressed")
+        subprocess.run("/home/pi/Documents/raspi-hq-cam/button27.py", shell=True)
     else: 
         print("released")
     sleep(0.5)
